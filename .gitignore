@@ -1,0 +1,46 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.python-version
+
+# --- Jupyter / Colab ---
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# --- Credentials: never commit ---
+kaggle.json
+.kaggle/
+access_token
+.env
+.env.*
+*.pem
+
+# --- Dataset & large generated artifacts (download via Kaggle API instead) ---
+ham10000/
+data/
+HAM10000_images_part_*/
+ham10000_images_part_*/
+HAM10000_metadata.csv
+hmnist_*.csv
+*.zip
+
+# --- Training outputs (keep only the final models in models/) ---
+skin_lesion_project/
+checkpoints/
+histories/
+logs/
+*.h5
+*.weights.h5
+*_stage*.keras
+compare_*.keras
+uploads/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

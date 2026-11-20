@@ -1,0 +1,50 @@
+{
+  "disease": {
+    "file": "disease_EfficientNetB3.keras",
+    "arch": "EfficientNetB3",
+    "img_size": 300,
+    "classes": [
+      "akiec",
+      "bcc",
+      "bkl",
+      "df",
+      "mel",
+      "nv",
+      "vasc"
+    ],
+    "class_names": {
+      "nv": "Melanocytic nevi",
+      "mel": "Melanoma",
+      "bkl": "Benign keratosis-like lesions",
+      "bcc": "Basal cell carcinoma",
+      "akiec": "Actinic keratoses / intraepithelial carcinoma",
+      "vasc": "Vascular lesions",
+      "df": "Dermatofibroma"
+    },
+    "gradcam_layer": "top_activation",
+    "use_tta": true
+  },
+  "location": {
+    "file": "location_EfficientNetB3.keras",
+    "arch": "EfficientNetB3",
+    "img_size": 300,
+    "classes": [
+      "abdomen",
+      "back",
+      "chest",
+      "ear",
+      "face",
+      "foot",
+      "genital",
+      "hand",
+      "lower extremity",
+      "neck",
+      "scalp",
+      "trunk",
+      "upper extremity"
+    ]
+  },
+  "preprocessing": "float32 RGB in [0,255], resized (bilinear) to img_size; EfficientNet: none, MobileNetV2: x/127.5-1, ResNet50: RGB->BGR minus ImageNet mean",
+  "test_accuracy": 0.8277027027027027,
+  "seed": 42
+}
